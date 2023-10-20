@@ -500,3 +500,872 @@ This API provides endpoints for user registration and user authentication.
     }
 }
 ```
+
+## EVENT SearchByName
+
+- **URL:** `GET /event/filter/category?category=Concierto`
+- **Description** filter Event
+- **Request Query (?category='category'):**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 2,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        },
+        {
+            "dataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
+
+## EVENT SearchByPrice
+
+- **URL:** `GET /event/filter/price?min_price=number&max_price=number`
+- **Description** filter Event
+- **Request Query (?min_price=number&max_price=number):**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 1,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
+
+## EVENT SearchByPrice
+
+- **URL:** `GET /event/filter/day?min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z`
+- **Description** filter Event
+- **Request Query (?min_price=number&max_price=number):**
+- **FORMAT TIME: 2023-08-31T00:00:00.000Z**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 3,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        },
+        {
+            "dataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        },
+        {
+            "dataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
+
+## EVENT SearchByCategoryAndPrice
+
+- **URL:** `GET /event/filter/category_price?category=Comercial&min_price=1&max_price=20
+- **Description** filter Event
+- **Request Query (?category=string&min_price=number&max_price=number):**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 1,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
+                "Name": "Ejempooo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Comercial",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 2,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 100,
+                "createdAt": "2023-10-19T16:27:54.000Z",
+                "updatedAt": "2023-10-20T07:12:19.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
+
+## EVENT SearchByCategoryAndPrice
+
+- **URL:** `GET /event/filter/category_day?category=Concierto&min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z
+- **Description** filter Event
+- **Request Query (?category=string&min_day=Date&max_day=Date):**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 2,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        },
+        {
+            "dataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
+
+## EVENT SearchByDayAndPrice
+
+- **URL:** `GET /event/filter/price_day?min_price=25&max_price=500&min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z
+- **Description** filter Event
+- **Request Query (?min_price=number&max_price=number&min_day=Date&max_day=Date):**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+
+```
+{
+    "count": 2,
+    "rows": [
+        {
+            "dataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
+                "Name": "Ejemplo de Evento",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T14:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-19T18:41:36.000Z",
+                "updatedAt": "2023-10-19T18:41:36.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        },
+        {
+            "dataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "_previousDataValues": {
+                "id": "8c8a2d83-68b3-4555-a5b1-00ad9cb9aa39",
+                "Name": "Ejemplo",
+                "Description": "Una descripción de ejemplo para el evento",
+                "Day": "2023-10-31T00:00:00.000Z",
+                "Hour": "2023-10-31T17:00:00.000Z",
+                "Age_min": 18,
+                "Category": "Concierto",
+                "Ubication": "Lugar de ejemplo",
+                "Price": 26,
+                "Image": "imagen.jpg",
+                "Artist": "Artista Ejemplo",
+                "Capacity": 500,
+                "createdAt": "2023-10-20T06:33:28.000Z",
+                "updatedAt": "2023-10-20T06:33:28.000Z",
+                "deletedAt": null
+            },
+            "uniqno": 1,
+            "_changed": [],
+            "_options": {
+                "isNewRecord": false,
+                "_schema": null,
+                "_schemaDelimiter": "",
+                "raw": true,
+                "attributes": [
+                    "id",
+                    "Name",
+                    "Description",
+                    "Day",
+                    "Hour",
+                    "Age_min",
+                    "Category",
+                    "Ubication",
+                    "Price",
+                    "Image",
+                    "Artist",
+                    "Capacity",
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt"
+                ]
+            },
+            "isNewRecord": false
+        }
+    ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: Incorrect credentials.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
