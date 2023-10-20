@@ -248,6 +248,8 @@ This API provides endpoints for user registration and user authentication.
 - **URL:** `GET /event/search?name=name`
 - **Description** Search Event Detail
 - **Request Query (?name='name'):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -501,11 +503,13 @@ This API provides endpoints for user registration and user authentication.
 }
 ```
 
-## EVENT SearchByName
+## EVENT SearchByCategory
 
 - **URL:** `GET /event/filter/category?category=Concierto`
 - **Description** filter Event
 - **Request Query (?category='category'):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -661,6 +665,8 @@ This API provides endpoints for user registration and user authentication.
 - **URL:** `GET /event/filter/price?min_price=number&max_price=number`
 - **Description** filter Event
 - **Request Query (?min_price=number&max_price=number):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -749,12 +755,14 @@ This API provides endpoints for user registration and user authentication.
 - 404 Not Found: NOT_FOUND: Event not found
 - 500 Internal Server Error: Could not log in the user.
 
-## EVENT SearchByPrice
+## EVENT SearchByDay
 
 - **URL:** `GET /event/filter/day?min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z`
 - **Description** filter Event
 - **Request Query (?min_price=number&max_price=number):**
 - **FORMAT TIME: 2023-08-31T00:00:00.000Z**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -972,6 +980,8 @@ This API provides endpoints for user registration and user authentication.
 - **URL:** `GET /event/filter/category_price?category=Comercial&min_price=1&max_price=20
 - **Description** filter Event
 - **Request Query (?category=string&min_price=number&max_price=number):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -1060,11 +1070,13 @@ This API provides endpoints for user registration and user authentication.
 - 404 Not Found: NOT_FOUND: Event not found
 - 500 Internal Server Error: Could not log in the user.
 
-## EVENT SearchByCategoryAndPrice
+## EVENT SearchByCategoryAndDay
 
 - **URL:** `GET /event/filter/category_day?category=Concierto&min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z
 - **Description** filter Event
 - **Request Query (?category=string&min_day=Date&max_day=Date):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
@@ -1220,6 +1232,8 @@ This API provides endpoints for user registration and user authentication.
 - **URL:** `GET /event/filter/price_day?min_price=25&max_price=500&min_day=2023-08-31T00:00:00.000Z&max_day=2023-11-31T00:00:00.000Z
 - **Description** filter Event
 - **Request Query (?min_price=number&max_price=number&min_day=Date&max_day=Date):**
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
 
 - **Request Header"**
 
