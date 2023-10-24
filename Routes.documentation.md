@@ -1383,3 +1383,177 @@ This API provides endpoints for user registration and user authentication.
 - 400 Bad Request: Incorrect credentials.
 - 404 Not Found: NOT_FOUND: Event not found
 - 500 Internal Server Error: Could not log in the user.
+
+## EVENT GetAllEvents
+
+- **URL:** `GET /event`
+- **Description** get all events 
+- **Query Optional pagination (limit=number&off-set=number)**
+    - **Default pagination: limit=20, off-set=0**
+
+- **Request Header"**
+
+```
+  {
+    .....
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+In this example, there are a total of 32 rows, but only 20 are shown. This is due to the default values (limit=20, offset=0).
+```
+{
+  "count": 32,
+  "rows": [
+    {
+      "dataValues": {
+        "id": "009ee05f-564f-4e50-b9aa-1607b5153dfc",
+        "Name": "Consumer Services59",
+        "Description": "Lion",
+        "Day": "2018-05-23T15:53:00.000Z",
+        "Hour": "2021-09-23T09:20:00.000Z",
+        "Age_min": 69,
+        "Category": "Hard Tile & Stone",
+        "Ubication": "Vicente Guerrero",
+        "Price": 45,
+        "Image": "https://wikimedia.org",
+        "Artist": "W√°",
+        "Capacity": 85,
+        "createdAt": "2021-09-23T09:20:00.000Z",
+        "updatedAt": "2021-09-23T09:20:00.000Z",
+        "deletedAt": null
+      },
+      "_previousDataValues": {
+        "id": "009ee05f-564f-4e50-b9aa-1607b5153dfc",
+        "Name": "Consumer Services59",
+        "Description": "Lion",
+        "Day": "2018-05-23T15:53:00.000Z",
+        "Hour": "2021-09-23T09:20:00.000Z",
+        "Age_min": 69,
+        "Category": "Hard Tile & Stone",
+        "Ubication": "Vicente Guerrero",
+        "Price": 45,
+        "Image": "https://wikimedia.org",
+        "Artist": "W√°",
+        "Capacity": 85,
+        "createdAt": "2021-09-23T09:20:00.000Z",
+        "updatedAt": "2021-09-23T09:20:00.000Z",
+        "deletedAt": null
+      },
+      "uniqno": 1,
+      "_changed": [],
+      "_options": {
+        "isNewRecord": false,
+        "_schema": null,
+        "_schemaDelimiter": "",
+        "raw": true,
+        "attributes": [
+          "id",
+          "Name",
+          "Description",
+          "Day",
+          "Hour",
+          "Age_min",
+          "Category",
+          "Ubication",
+          "Price",
+          "Image",
+          "Artist",
+          "Capacity",
+          "createdAt",
+          "updatedAt",
+          "deletedAt"
+        ]
+      },
+      "isNewRecord": false
+    },
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {...},
+    {
+      "dataValues": {
+        "id": "2756c20f-d710-4f9c-bd26-fb323df8d202",
+        "Name": "Miscellaneous88",
+        "Description": "Thayne",
+        "Day": "2016-06-23T15:53:00.000Z",
+        "Hour": "2020-10-23T09:20:00.000Z",
+        "Age_min": 85,
+        "Category": "Retaining Wall and Brick Pavers",
+        "Ubication": "Los Boquerones",
+        "Price": 38,
+        "Image": "http://dot.gov",
+        "Artist": "Ma√Øwenn",
+        "Capacity": 32,
+        "createdAt": "2020-10-23T09:20:00.000Z",
+        "updatedAt": "2020-10-23T09:20:00.000Z",
+        "deletedAt": null
+      },
+      "_previousDataValues": {
+        "id": "2756c20f-d710-4f9c-bd26-fb323df8d202",
+        "Name": "Miscellaneous88",
+        "Description": "Thayne",
+        "Day": "2016-06-23T15:53:00.000Z",
+        "Hour": "2020-10-23T09:20:00.000Z",
+        "Age_min": 85,
+        "Category": "Retaining Wall and Brick Pavers",
+        "Ubication": "Los Boquerones",
+        "Price": 38,
+        "Image": "http://dot.gov",
+        "Artist": "Ma√Øwenn",
+        "Capacity": 32,
+        "createdAt": "2020-10-23T09:20:00.000Z",
+        "updatedAt": "2020-10-23T09:20:00.000Z",
+        "deletedAt": null
+      },
+      "uniqno": 1,
+      "_changed": [],
+      "_options": {
+        "isNewRecord": false,
+        "_schema": null,
+        "_schemaDelimiter": "",
+        "raw": true,
+        "attributes": [
+          "id",
+          "Name",
+          "Description",
+          "Day",
+          "Hour",
+          "Age_min",
+          "Category",
+          "Ubication",
+          "Price",
+          "Image",
+          "Artist",
+          "Capacity",
+          "createdAt",
+          "updatedAt",
+          "deletedAt"
+        ]
+      },
+      "isNewRecord": false
+    }
+  ]
+}
+```
+
+## ERRORS
+
+- 400 Bad Request: BAD_REQUEST: Validation failed (numeric string is expected.
+- 404 Not Found: NOT_FOUND: Event not found
+- 500 Internal Server Error: Could not log in the user.
