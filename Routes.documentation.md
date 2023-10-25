@@ -1394,8 +1394,8 @@ This API provides endpoints for user registration and user authentication.
 - **Request Header"**
 
 ```
-  {
-    .....
+  {.
+    .......
     "access_token": "token de JWT"
   }
 ```
@@ -1557,3 +1557,95 @@ In this example, there are a total of 32 rows, but only 20 are shown. This is du
 - 400 Bad Request: BAD_REQUEST: Validation failed (numeric string is expected.
 - 404 Not Found: NOT_FOUND: Event not found
 - 500 Internal Server Error: Could not log in the user.
+
+## EVENT GetUpcommingEvents
+
+- **URL:** `GET /event/upcoming`
+- **Description** get upcoming events 
+- **Query Optional pagination (limit=number)**
+    - **Default pagination: limit=6**
+
+- **Request Header"**
+
+```
+  {.
+    .......
+    "access_token": "token de JWT"
+  }
+```
+
+- **Response Body(JSON)**
+```
+{
+  "count": 6,
+  "rows": [
+    {
+      "dataValues": {
+        "id": "d0fac699-53b5-4b21-8550-cd7a981cc902",
+        "Name": "Technology58",
+        "Description": "Davidson",
+        "Day": "2023-10-26T10:57:30.000Z",
+        "Hour": "2023-10-18T10:57:30.000Z",
+        "Age_min": 75,
+        "Category": "Construction Clean and Final Clean",
+        "Ubication": "Beni Khiar",
+        "Price": 6,
+        "Image": "https://miibeian.gov.cn",
+        "Artist": "L√≥ng",
+        "Capacity": 64,
+        "createdAt": "2023-10-18T10:57:30.000Z",
+        "updatedAt": "2023-10-18T10:57:30.000Z",
+        "deletedAt": null
+      },
+      "_previousDataValues": {
+        "id": "d0fac699-53b5-4b21-8550-cd7a981cc902",
+        "Name": "Technology58",
+        "Description": "Davidson",
+        "Day": "2023-10-26T10:57:30.000Z",
+        "Hour": "2023-10-18T10:57:30.000Z",
+        "Age_min": 75,
+        "Category": "Construction Clean and Final Clean",
+        "Ubication": "Beni Khiar",
+        "Price": 6,
+        "Image": "https://miibeian.gov.cn",
+        "Artist": "L√≥ng",
+        "Capacity": 64,
+        "createdAt": "2023-10-18T10:57:30.000Z",
+        "updatedAt": "2023-10-18T10:57:30.000Z",
+        "deletedAt": null
+      },
+      "uniqno": 1,
+      "_changed": [],
+      "_options": {
+        "isNewRecord": false,
+        "_schema": null,
+        "_schemaDelimiter": "",
+        "raw": true,
+        "attributes": [
+          "id",
+          "Name",
+          "Description",
+          "Day",
+          "Hour",
+          "Age_min",
+          "Category",
+          "Ubication",
+          "Price",
+          "Image",
+          "Artist",
+          "Capacity",
+          "createdAt",
+          "updatedAt",
+          "deletedAt"
+        ]
+      },
+      "isNewRecord": false
+    },
+    {...},
+    {...},
+    {...},
+    {...},
+    {...}
+  ]
+}
+```
