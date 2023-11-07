@@ -31,14 +31,21 @@ This API provides endpoints for user registration and user authentication.
 - **Response Body(JSON):**
   ```json
   {
-      {
-        "token": "Authentication Token",
-        "user": {
-            // User data
-        },
-        "message": "User created successfully"
-        }
-    }
+  "user": {
+    "id": "36512882-26ec-4795-ba30-118549f80aeb",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Username": "Username",
+    "Adress": "Address",
+    "Birthdate": "2004-04-07T03:00:00.000Z",
+    "Email": "Ema@gmail.com",
+    "Password": "$2b$10$3RzD6dw1D/avxi8jLDJmNeIJyb.koV5hSp2naOBpSGXddjwFZp6wC",
+    "Image": "Image URL",
+    "updatedAt": "2023-11-07T00:32:58.420Z",
+    "createdAt": "2023-11-07T00:32:58.420Z"
+  },
+  "message": "Usuario creado exitosamente"
+}
   ```
 
 ## ERRORS
@@ -48,7 +55,7 @@ This API provides endpoints for user registration and user authentication.
 
 ### User Login
 
-- **URL:** `POST /user/login`
+- **URL:** `POST /auth/login`
 - **Description:** Log in to the application with the provided credentials.
 - **Request Body (JSON):**
 
@@ -63,11 +70,27 @@ This API provides endpoints for user registration and user authentication.
 
 ```json
 {
-  "user": {
-    // User data
+  "jwt": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3ZjZkODBkMy1lYzEwLTQ3NjItYTQ4MS1iNzkzNTM1NzE0OTQiLCJyb2xlIjpudWxsLCJpYXQiOjE2OTkzMTcwMDAsImV4cCI6MTY5OTMyMDYwMH0.MobNbKAXl7EM85F_2YFQkZhnjfUPY4u6tqkKBigaGGE",
+    "dataValues": {
+      "id": "7f6d80d3-ec10-4762-a481-b79353571494",
+      "FirstName": "First Name",
+      "LastName": "Last Name",
+      "Username": "Username",
+      "Adress": "Address",
+      "Birthdate": "2004-07-04T03:00:00.000Z",
+      "Email": "example@outlook.com",
+      "Password": "$2b$10$Gb6v1mIEMcFnPCKunLh3beCYzo8fGUj8rjTZs6.U5NahAn0ihsW9O",
+      "Image": "Image URL",
+      "Qr": null,
+      "Tickets": null,
+      "Role": null,
+      "createdAt": "2023-11-07T00:11:19.000Z",
+      "updatedAt": "2023-11-07T00:11:19.000Z",
+      "deletedAt": null
+    }
   },
-  "token": "Authentication Token",
-  "message": "User logged in successfully"
+  "message": "Usuario logueado exitosamente"
 }
 ```
 
