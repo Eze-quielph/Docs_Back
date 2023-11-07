@@ -72,7 +72,7 @@ This API provides endpoints for user registration and user authentication.
 ```json
 {
   "jwt": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3ZjZkODBkMy1lYzEwLTQ3NjItYTQ4MS1iNzkzNTM1NzE0OTQiLCJyb2xlIjpudWxsLCJpYXQiOjE2OTkzMTcwMDAsImV4cCI6MTY5OTMyMDYwMH0.MobNbKAXl7EM85F_2YFQkZhnjfUPY4u6tqkKBigaGGE",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3ZjZkODBkMy1lYzEwLTQ3NjItYTQ4MS1iNzkzNTM1NzE0OTQiLCJyb2xlIjpudWxsLCJpYXQiOjE2OTkzMTcwMDAsImV4cCI6MTY5OTMyMDYwMH0.MobNbKAXl7EM85F_2YFQkZhnjfUPY4u6tqkKBigaGGE",
     "dataValues": {
       "id": "7f6d80d3-ec10-4762-a481-b79353571494",
       "FirstName": "First Name",
