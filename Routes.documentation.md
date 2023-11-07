@@ -53,7 +53,8 @@ This API provides endpoints for user registration and user authentication.
 - 400 Bad Request: User already exists.
 - 500 Internal Server Error: Could not create the user
 
-### User Login
+
+-**User Login**
 
 - **URL:** `POST /auth/login`
 - **Description:** Log in to the application with the provided credentials.
