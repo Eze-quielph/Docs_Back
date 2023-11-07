@@ -52,7 +52,7 @@ This API provides endpoints for user registration and user authentication.
 
 - 400 Bad Request: User already exists.
 - 500 Internal Server Error: Could not create the user
-
+```
 
 -**User Login**
 
@@ -65,7 +65,7 @@ This API provides endpoints for user registration and user authentication.
   "Email": "Email Address",
   "Password": "Password"
 }
-```
+
 
 - **Response Body(JSON):**
 
