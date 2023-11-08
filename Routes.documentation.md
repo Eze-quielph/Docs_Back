@@ -22,9 +22,7 @@ This API provides endpoints for user registration and user authentication.
     "Email": "Email Address",
     "Password": "Password",
     "Image": "Image URL",
-    "Qr": "QR Code",
-    "Tickets": "Tickets",
-    "Role": "Role"
+    "Role": "CREATOR O USER DEPENDE EL CASO"
   }
   ```
 
@@ -119,7 +117,8 @@ This API provides endpoints for user registration and user authentication.
   "Price": 25.99,
   "Image": "imagen.jpg",
   "Artist": "Artista Ejemplo",
-  "Capacity": 500
+  "Capacity": 500,
+  "UserId":"ID del usuario que crea"
 }
 ```
 
@@ -135,48 +134,26 @@ This API provides endpoints for user registration and user authentication.
 - **Response Body(JSON):**
 
 ```
-{
-    "dataValues": {
-        "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
-        "Name": "Ejemplo de Evento",
-        "Description": "Una descripción de ejemplo para el evento",
-        "Day": "2023-10-31T00:00:00.000Z",
-        "Hour": "2023-10-31T14:00:00.000Z",
-        "Age_min": 18,
+[
+    {
+        "id": "67656e79-2813-4d1b-aca5-0ea21cf88201",
+        "Name": "Concierto Danilo Montero",
+        "Description": "dasdfdafda",
+        "Day": "2023-11-07T03:00:00.000Z",
+        "Hour": "2023-11-07T03:00:00.000Z",
+        "Age_min": 10,
         "Category": "Concierto",
-        "Ubication": "Lugar de ejemplo",
-        "Price": 25.99,
-        "Image": "imagen.jpg",
-        "Artist": "Artista Ejemplo",
-        "Capacity": 500,
-        "updatedAt": "2023-10-19T18:41:36.907Z",
-        "createdAt": "2023-10-19T18:41:36.907Z"
-    },
-    "_previousDataValues": {
-        "Name": "Ejemplo de Evento",
-        "Description": "Una descripción de ejemplo para el evento",
-        "Day": "2023-10-31T00:00:00.000Z",
-        "Hour": "2023-10-31T14:00:00.000Z",
-        "Age_min": 18,
-        "Category": "Concierto",
-        "Ubication": "Lugar de ejemplo",
-        "Price": 25.99,
-        "Image": "imagen.jpg",
-        "Artist": "Artista Ejemplo",
-        "Capacity": 500,
-        "id": "8c81939a-0f1b-4332-a4d8-ef43e3cc41ab",
-        "createdAt": "2023-10-19T18:41:36.907Z",
-        "updatedAt": "2023-10-19T18:41:36.907Z"
-    },
-    "uniqno": 1,
-    "_changed": [],
-    "_options": {
-        "isNewRecord": true,
-        "_schema": null,
-        "_schemaDelimiter": ""
-    },
-    "isNewRecord": false
-}
+        "Ubication": "Argentina, Palermo",
+        "Price": 500,
+        "Image": "https://th.bing.com/th/id/R.97587721349a5be9d7e0c2f80cf9bf86?rik=Kfynk9ck4dnRHw&riu=http%3a%2f%2fcdn.hallels.com%2fdata%2fimages%2ffull%2f11346%2fdanilo-montero.jpg%3fw%3d620&ehk=DNXOmOvgDOaltRP0UnCgBk%2b1SWY28%2fvSuTh90%2f9%2b%2bS4%3d&risl=&pid=ImgRaw&r=0",
+        "Artist": "Danilo Montero",
+        "Capacity": 10,
+        "userId": null,
+        "createdAt": "2023-11-08T01:51:01.361Z",
+        "updatedAt": "2023-11-08T01:51:01.361Z",
+        "deletedAt": null
+    }
+]
 ```
 
 ## EVENT SearchById
@@ -198,68 +175,23 @@ This API provides endpoints for user registration and user authentication.
 
 ```
 {
-    "dataValues": {
-        "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
-        "Name": "Ejemplooooo",
-        "Description": "Una descripción de ejemplo para el evento",
-        "Day": "2023-10-31T00:00:00.000Z",
-        "Hour": "2023-10-31T17:00:00.000Z",
-        "Age_min": 18,
-        "Category": "Concierto",
-        "Ubication": "Lugar de ejemplo",
-        "Price": 26,
-        "Image": "imagen.jpg",
-        "Artist": "Artista Ejemplo",
-        "Capacity": 100,
-        "createdAt": "2023-10-19T16:27:54.000Z",
-        "updatedAt": "2023-10-19T17:50:49.000Z",
-        "deletedAt": null
-    },
-    "_previousDataValues": {
-        "id": "7df60ffa-07dd-4e73-aa4f-1adaad9b13ab",
-        "Name": "Ejemplooooo",
-        "Description": "Una descripción de ejemplo para el evento",
-        "Day": "2023-10-31T00:00:00.000Z",
-        "Hour": "2023-10-31T17:00:00.000Z",
-        "Age_min": 18,
-        "Category": "Concierto",
-        "Ubication": "Lugar de ejemplo",
-        "Price": 26,
-        "Image": "imagen.jpg",
-        "Artist": "Artista Ejemplo",
-        "Capacity": 100,
-        "createdAt": "2023-10-19T16:27:54.000Z",
-        "updatedAt": "2023-10-19T17:50:49.000Z",
-        "deletedAt": null
-    },
-    "uniqno": 1,
-    "_changed": [],
-    "_options": {
-        "isNewRecord": false,
-        "_schema": null,
-        "_schemaDelimiter": "",
-        "raw": true,
-        "attributes": [
-            "id",
-            "Name",
-            "Description",
-            "Day",
-            "Hour",
-            "Age_min",
-            "Category",
-            "Ubication",
-            "Price",
-            "Image",
-            "Artist",
-            "Capacity",
-            "createdAt",
-            "updatedAt",
-            "deletedAt"
-        ]
-    },
-    "isNewRecord": false
-}
-```
+    "id": "98b00183-3e1d-42b2-8974-fc813595f324",
+    "Name": "Concierto Danilo Montero Rosario",
+    "Description": "dasdfdafda",
+    "Day": "2023-11-07T03:00:00.000Z",
+    "Hour": "2023-11-07T03:00:00.000Z",
+    "Age_min": 10,
+    "Category": "Concierto",
+    "Ubication": "Argentina, Rosario",
+    "Price": 500,
+    "Image": "https://th.bing.com/th/id/R.97587721349a5be9d7e0c2f80cf9bf86?rik=Kfynk9ck4dnRHw&riu=http%3a%2f%2fcdn.hallels.com%2fdata%2fimages%2ffull%2f11346%2fdanilo-montero.jpg%3fw%3d620&ehk=DNXOmOvgDOaltRP0UnCgBk%2b1SWY28%2fvSuTh90%2f9%2b%2bS4%3d&risl=&pid=ImgRaw&r=0",
+    "Artist": "Danilo Montero",
+    "Capacity": 10,
+    "userId": "9fa175e8-9eb2-4769-953a-61e99d08b989",
+    "createdAt": "2023-11-08T02:16:18.816Z",
+    "updatedAt": "2023-11-08T02:16:18.816Z",
+    "deletedAt": null
+}```
 
 ## ERRORS
 
